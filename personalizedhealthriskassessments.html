@@ -1,26 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalised Health Risk Assessments</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
+  <title>CareGuardian - Personalised Health Risk Assesment</title>
+  <style>
+    /* Reset default margin and padding for consistency */
+* {
+  margin: 0;
+  padding: 0;
+}
 
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: 0;
-        }
-    </style>
+/* Apply a background color and set the font for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Style the header and navigation bar */
+header {
+  background-color: #27ae60;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Style the container for content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style the buttons and links */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #27ae60;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #219843;
+}
+
+.btn-secondary {
+  background-color: #333;
+}
+
+/* Style the services section */
+.services-section {
+  padding: 50px 0;
+}
+
+.services-section h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-list {
+  list-style: disc;
+  padding-left: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style the footer section */
+.footer-section {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+</style>
 </head>
 <body>
-    <iframe src="https://www.pennmedicine.org/updates/health-risk-assessment-tools"></iframe>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="careguardian_logo.png" alt="CareGuardian Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html" onclick="navigateTo('home')">Home</a></li>
+        <li><a href="services.html" onclick="navigateTo('services')">Services</a></li>
+        <li><a href="help.html" onclick="navigateTo('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="services-section">
+    <div class="container">
+      <h2>Our Assesment Type</h2>
+      <ul class="chatbot-list">
+        <li><a href="cancercure.html" onclick="navigateTo('cancercure')">Cancer Risk Assesment</a></li>
+        <li><a href="orthocure.html" onclick="navigateTo('orthocure')">Orthopaedic Disease Assesment</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container text-center">
+      <p>&copy; 2024 CareGuardian. All rights reserved.</p>
+    </div>
+  </footer>
+<script>
+window.embeddedChatbotConfig = {
+chatbotId: "j0kUpEUlE7FibOKjvqCCE",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="j0kUpEUlE7FibOKjvqCCE"
+domain="www.chatbase.co"
+defer>
+</script>
+  <script>
+    function navigateTo(page) {
+      window.location.href = page + '.html';
+    }
+  </script>
 </body>
 </html>
-
